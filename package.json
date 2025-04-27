@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "mocha -r tsx *.tesr.ts",
-    "dev": "ts-node server.ts"
+    "test": "mocha -r tsx test/*.tesr.ts",
+    "dev": "ts-node server.ts",
+    "build": "tsc"
   },
   "author": "",
   "license": "ISC",
@@ -19,12 +20,12 @@
     "@types/express": "5.0.1",
     "@types/mocha": "10.0.10",
     "@types/node": "22.15.2",
+    "@types/sinon": "^17.0.4",
     "chai": "5.2.0",
     "mocha": "11.1.0",
-    "tsc": "2.0.4",
+    "sinon": "^20.0.0",
+    "ts-node": "10.9.2",
     "tsx": "4.19.3",
-    "typescript": "5.8.3",
-    "ts-node": "10.9.2"
-   
+    "typescript": "5.8.3"
   }
 }

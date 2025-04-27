@@ -1,8 +1,15 @@
 import express from 'express';
 import cors from 'cors';
+import HelloHandler from './src/handlers/hello';
+
 
 const app = express();
 app.use(cors());
+
+const helloHandler = new HelloHandler();
+
+app.get('/',helloHandler.handle);
+
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
