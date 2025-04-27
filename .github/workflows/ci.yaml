@@ -34,4 +34,7 @@ jobs:
 
       - name: Deploy to Render
         if: ${{ github.ref == 'refs/heads/master'  && success() }}
+        env:
+          RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
+          CI: true
         run: render deploy create  srv-d06uot1r0fns738101rg --output json  --confirm
