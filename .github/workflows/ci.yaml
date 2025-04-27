@@ -3,7 +3,7 @@ name: servier CI
 on:
   push:
     branches:
-      [ main ]
+      [ master ]
   pull_request:
     branches:
       [ main ]
@@ -24,6 +24,6 @@ jobs:
 
       - name: Run build
         run: npm run build
-        
+
       - name: Run tests
         run: npm test
