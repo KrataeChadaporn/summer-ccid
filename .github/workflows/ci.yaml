@@ -37,4 +37,4 @@ jobs:
         env:
           RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
           CI: true
-        run: render deploy create srv-d06uot1r0fns738101rg --output json  --confirm
+        run: render deploys create srv-d06uot1r0fns738101rg --output json  --confirm

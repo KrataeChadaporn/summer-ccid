@@ -5,7 +5,8 @@
   "scripts": {
     "test": "mocha -r tsx *.test.ts",
     "dev": "ts-node server.ts",
-    "build": "tsc"
+    "build": "tsc",
+     "start": "node dist/server.js"
   },
   "author": "",
   "license": "ISC",
