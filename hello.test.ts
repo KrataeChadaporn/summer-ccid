@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { HelloService } from "../src/services/hello_service"
+import { HelloService } from "./src/services/hello_service"
 
 describe("Test hello world service", () => {
     it("should return hello world", () => {
