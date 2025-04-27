@@ -31,10 +31,9 @@ jobs:
       - name: Install Render CLI
         if: ${{ github.ref == 'refs/heads/master' && success()}}
         run: curl -fsSL https://raw.githubusercontent.com/render-oss/cli/refs/heads/main/bin/install.sh | sh
-
       - name: Deploy to Render
-        if: ${{ github.ref == 'refs/heads/master'  && success() }}
+        if: ${{ github.ref == 'refs/heads/master' && success() }}
         env:
           RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
           CI: true
-        run: render deploys create srv-d06uot1r0fns738101rg --output json  --confirm
+        run: render deploys create srv-d06uot1r0fns738101rg --output json --confirm
