@@ -27,7 +27,7 @@ jobs:
 
       - name: Run tests
         run: npm test
-        
+
       - name: Install Render CLI
         if: ${{ github.ref == 'refs/heads/main' && success()}}
         run: curl -fsSL https://raw.githubusercontent.com/render-oss/cli/refs/heads/main/bin/install.sh | sh
@@ -37,4 +37,4 @@ jobs:
         env:
           RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
           CI: true
-        run: render deploy create  srv-d06uot1r0fns738101rg --output json  --confirm
+        run: render deploy create srv-d06uot1r0fns738101rg --output json  --confirm
