@@ -27,3 +27,11 @@ jobs:
 
       - name: Run tests
         run: npm test
+
+      - name: Install Render CLI
+        if: ${{ github.ref == 'refs/heads/master'  && success() }}
+        run: curl -fsSL https://raw.githubusercontent.com/render-oss/cli/refs/hands/main/bin/render.sh | sh
+
+      - name: Deploy to Render
+        if: ${{ github.ref == 'refs/heads/master'  && success() }}
+        run: reder deploys create srv-d06uot1r0fns738101rg --output json  --confirm
