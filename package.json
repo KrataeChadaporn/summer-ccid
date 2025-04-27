@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "mocha -r tsx test/*.tesr.ts",
+    "test": "mocha -r tsx *.test.ts",
     "dev": "ts-node server.ts",
     "build": "tsc"
   },
